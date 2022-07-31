@@ -137,6 +137,9 @@ for _ in range(m):
     s.push(n)
     
 o = int(input("enter the number of elements you want to pop:"))
+if o > len(s.a):
+    print("enter a valid number: ")
+    o = int(input("enter the number of elements you want to pop:"))
 for _ in range(o):
     s.popp()
 
