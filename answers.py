@@ -110,6 +110,37 @@ for i in range(1,len(a)):
 print(sort)
 
 
+#stack
+
+class stack():
+    def __init__(self):
+        self.a = []
+        
+    def push(self,n):
+        self.a.append(n)
+        for i in self.a[::-1]:
+            print(i)
+            print("--")
+        print("successfully pushed ", n)
+            
+    def popp(self):
+        m = self.a.pop()
+        for i in self.a[::-1]:
+            print(i)
+            print("__")
+        print("successfully popped ",m)
+            
+s = stack()
+m = int(input("enter the number of elements you want to push:"))
+for _ in range(m):
+    n= eval(input("enter an element:"))
+    s.push(n)
+    
+o = int(input("enter the number of elements you want to pop:"))
+for _ in range(o):
+    s.popp()
+
+
 
 
 
