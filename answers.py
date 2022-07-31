@@ -111,7 +111,6 @@ print(sort)
 
 
 #stack
-
 class stack():
     def __init__(self):
         self.a = []
@@ -124,11 +123,11 @@ class stack():
         print("successfully pushed ", n)
             
     def popp(self):
-        m = self.a.pop()
+        popped_element = self.a.pop()
         for i in self.a[::-1]:
             print(i)
-            print("__")
-        print("successfully popped ",m)
+            print("--")
+        print("successfully popped ",popped_element)
             
 s = stack()
 m = int(input("enter the number of elements you want to push:"))
@@ -143,7 +142,40 @@ if o > len(s.a):
 for _ in range(o):
     s.popp()
 
-
+#queue
+class queue():
+    def __init__(self):
+        self.a = []
+        
+    def enqueue(self,element_to_enqueue):
+        self.a.append(element_to_enqueue)
+        for elements in self.a:
+            print(elements)
+            print("--")
+        print("successfully enqueued ", element_to_enqueue)
+        
+    def dequeue(self):
+        dequeued_element = self.a.pop(0)
+        for elements in self.a:
+            print(elements)
+            print("--")
+        print("successfully dequeued ", dequeued_element)
+        
+        
+        
+q = queue() 
+m = int(input("enter the number of elements you want to enqueue:"))
+for _ in range(m):
+    n= eval(input("enter an element:"))
+    q.enqueue(n)
+     
+o = int(input("enter the number of elements you want to dequeue:"))
+if o > len(q.a):
+    print("enter a valid number: ")
+    o = int(input("enter the number of elements you want to dequeue:"))
+for _ in range(o):
+    q.dequeue()      
+    
 
 
 
