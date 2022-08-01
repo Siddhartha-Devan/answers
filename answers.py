@@ -175,7 +175,35 @@ if o > len(q.a):
     o = int(input("enter the number of elements you want to dequeue:"))
 for _ in range(o):
     q.dequeue()      
-    
+ 
+#quick_sort
+a = [23,101,-3700,66,99,-302]
+print(a)
+def partition(arr,low,high):
+    i = -1
+   
+    pivot = arr[high]
+    for j in range(len(a)):
+        if (arr[j] < pivot):
+            i += 1
+            arr[i],arr[j] = arr[j],arr[i]
+        if (arr[j]==pivot):
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    return i
+
+def quick_sort(arr,low,high):
+    if low<high:
+        m = partition(arr,low,high)
+        quick_sort(arr,low,m-1)
+        quick_sort(arr,m+1,high)
+
+    return arr
+
+low = 0
+high = len(a) - 1
+
+print("sorted list = ",quick_sort(a,low,high))
 
 
 
