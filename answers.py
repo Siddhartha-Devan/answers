@@ -253,7 +253,21 @@ print(obj.n2)
     
 
 
+    
+    
+###
+class circle:
+    def __init__(self):
+        self.radius = float(input("enter the radius: "))
+        
+        
+    def area(self):
+        area = 3.14 * self.radius * self.radius
+        print("area of the circle: ", area)
 
+
+m = circle() 
+m.area()
 
 
      
