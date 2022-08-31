@@ -207,6 +207,55 @@ print("sorted list = ",quick_sort(a,low,high))
 
 
 
+
+
+
+
+# exercise 1
+
+class kangaroo():
+    def __init__(self):
+        self.pouch_contents = []
+        
+    def put_in_pouch(self,cont):
+        self.pouch_contents.append(cont)
+    
+    def show(self):
+        print("pouch contents are")
+        print(self.pouch_contents)
+        
+kang = kangaroo()
+kang.put_in_pouch("roo")
+kang.show()
+
+
+
+# swapping numbers without third variable
+
+class swap():
+    def __init__(self, a, b):
+        self.n1 = a
+        self.n2 = b
+        
+    def swapper(self):
+        self.n1 = self.n1 + self.n2
+        self.n2 = self.n1 - self.n2
+        self.n1 = self.n1 - self.n2
+        
+        print("var1 = ", self.n1,"var2", self.n2)
+        
+a = int(input("enter var1: "))
+b = int(input("enter var2: "))
+obj = swap(a,b)
+obj.swapper()
+print(obj.n1)
+print(obj.n2)
+    
+
+
+
+
+
      
 
     
