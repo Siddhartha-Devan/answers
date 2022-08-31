@@ -270,7 +270,31 @@ m = circle()
 m.area()
 
 
-     
+ 
+###    
+class matrix():
+    def __init__(self, n_row, n_column):
+        self.n_row = n_row
+        self.n_column = n_column
+        self.mat = []
+        for i in range(n_row):
+            self.mat.append([])
+            for j in range(n_column):
+                a = int(input(f"enter element {j+1} of row {i+1} : "))
+                self.mat[i].append(a)
+                
+    def printer(self):
+        print(self.n_row)
+        print(self.n_column)
+        for i in self.mat:
+            print(i)
+
+m = int(input("enter the number of rows:"))
+n = int(input("enter the number of columns: "))
+        
+a = matrix(m,n)
+a.printer()
+ 
 
     
             
